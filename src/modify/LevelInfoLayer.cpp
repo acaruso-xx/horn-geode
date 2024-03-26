@@ -90,7 +90,11 @@ class $modify(CustomLevelInfoLayer, LevelInfoLayer) {
         horn::Manager::sharedManager()->setHintShown(true);
 
         std::string body = fmt::format(
-            "<cl>Skillset</c>: {}\n\n{}",
+            "<cr>Tier</c>: {}" "\n"
+            "<cl>Skillset</c>: {}" "\n"
+            "\n"
+            "{}",
+            m_fields->m_levelInfo->tier(),
             m_fields->m_levelInfo->skillset(),
             m_fields->m_levelInfo->description()
         );
